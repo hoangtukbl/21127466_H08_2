@@ -1,0 +1,35 @@
+kết quả output:
+	dòng 81: khai báo biến b1 theo kiểu Base -> chạy hàm constructor của Base -> cout "Base constructor-0 param", gán t của b1 = 0
+	dòng 82: khai báo biến b2 theo kiểu Base với giá trị 3 -> chạy hàm constructor của Base với 1 biến int -> cout "Base constructor-1 param", gán t của b2 = 3
+	dòng 83: khai báo biến pb là địa chỉ theo biến Base với giá trị 1 -> chạy hàm constructor của Base với 1 biến int -> cout "Base constructor-1 param", gán t của &pb = 1 
+	dòng 84: khai báo biến da1 theo kiểu DerivedA là Class kế thừa thuộc tính của Class Base -> cout "DerivedA constructor-0 param"  , gán a của da1 = 0 , chạy constructor của Base -> cout "Base constructor-0 param"
+	dòng 85: khai báo biến da2 theo kiểu DerivedA với giá trị 2 -> chạy hàm constructor của DerivedA với 1 biến int -> cout "DerivedA constructor-1 param" , gán a của da1  = 2 , chạy constructor của Base -> cout "Base constructor-0 param"
+	dòng 86: khai báo biến da3 theo kiểu DerivedA với giá trị 2,3-> chạy hàm constructor của DerivedA với 2 biến int -> cout "DerivedA constructor-2 params" , gán a của da2 = 3 , chạy constructor của Base -> cout "Base constructor-0 param"
+	dòng 87: khai báo biến da4 theo kiểu DerivedA với giá trị là biến da2 -> chạy hàm constructor của Derived với hằng số là biến kiểu DerivedA -> gán a của da4 = a của da2 , chạy constructor của Base -> cout "Base constructor-0 param"
+	dòng 88: gán biến pb là địa chỉ theo biến DerivedA với giá trị 4,5 -> chạy hàm constructor của DerivedA với 2 biến int -> cout "DerivedA constructor-2 params", gán a của &pb = 5 , chạy constructor của Base -> cout "Base constructor-0 param"
+	dòng 89: tương tự dòng 84 nhưng theo kiểu DerivedB -> cout "DerivedB constructor-0 param" , gán b của db1 = 0 , chạy constructor của Base -> cout "Base constructor-0 param"
+	dòng 90: khai báo biến db2 theo kiểu DerivedB với giá trị 2.7 -> chạy hàm constructor của DerivedB với 1 biến float -> cout "DerivedB constructor-1 param" gán b của db2 = 2.7 ,chạy constructor của Base -> cout "Base constructor-0 param"
+	dòng 91: khai báo biến db3 theo kiểu DerivedB với giá trị 3, 2.7->chạy hàm constructor của DerivedB với 2 biến int và flaot -> cout "DerivedB constructor-2 params" , gán b của db2 = 2.7 , chạy constructor của Base với (địa chỉ biến Base) -> cout "Base copy constructor"
+	dòng 92: khai báo biến db4 theo kiểu DerivedB với giá trị của 1 biến DerivedB là db2->chạy hàm constructor của DerivedB với giá trị là biến hằng theo kiểu DerivedB -> cout "DerivedB copy constructor" , chạy constructor của Base với (địa chỉ biến Base) -> cout "Base copy constructor"
+	dòng 93: gán biến pb là địa chỉ theo biến DerivedB với giá trị 4,5 -> chạy hàm constructor của DerivedB với 1 biến int và 1 biến float -> cout "DerivedB constructor-2 params", gán b của &pb = 5 , chạy constructor của Base với (địa chỉ biến Base) -> cout "Base copy constructor"
+	dòng 94: chạy hàm f -> cout "Function f"
+	dòng 95: chạy hàm f -> cout "Function f"
+	dòng 96: chạy hàm f -> cout "Function f"
+	dòng 97: delete địa chỉ pb-> chạy hàm ~DerivedB và ~Base -> cout "DerivedB destructor" , cout "Base destructor"
+	dòng 98: return-> chạy tất cả hàm destructor của các biến từ dưới đi lên từ db4 tới b1 -> cout lần lượt: 
+		DerivedB destructor
+		Base destructor
+		DerivedB destructor
+		Base destructor
+		DerivedB destructor
+		Base destructor
+		DerivedA destructor
+		Base destructor
+		DerivedA destructor
+		Base destructor
+		DerivedA destructor
+		Base destructor
+		DerivedA destructor
+		Base destructor
+		Base destructor
+		Base destructor
