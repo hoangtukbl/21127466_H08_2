@@ -1,3 +1,4 @@
+#pragma once
 #include "Gate.h"
 #include "Prince.h"
 

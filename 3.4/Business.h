@@ -1,3 +1,4 @@
+#pragma once
 #include "Gate.h"
 #include "Prince.h"
 
@@ -7,6 +8,7 @@ private:
     int number;
     int price;
 public:
+    Business();
     void input();
     bool pass(Prince &);
 };

@@ -1,5 +1,10 @@
 #include "Business.h"
 
+Business::Business(){
+    number = 0;
+    price = 0;
+}
+
 void Business::input(){
     cout<<"input number of obj: ";
     int temp;
